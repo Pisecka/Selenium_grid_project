@@ -45,8 +45,7 @@ class BasePage:
         return self
 
     def confirm_alert(self):
-        WebDriverWait(self.browser, self.browser.t).until(EC.alert_is_present())
-        alert = self.browser.switch_to.alert
+        alert = WebDriverWait(self.browser, self.browser.t).until(EC.alert_is_present())
         text = alert.text
         alert.accept()
         return text

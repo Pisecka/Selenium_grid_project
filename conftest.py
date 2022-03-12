@@ -41,5 +41,3 @@ def browser(request):
     driver.get(url)
     request.addfinalizer(driver.quit)
     return driver
-
-
