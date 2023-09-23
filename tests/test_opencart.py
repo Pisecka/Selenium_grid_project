@@ -1,3 +1,5 @@
+import time
+
 from page_objects.AdminPage import AdminPage
 from page_objects.CatalogPage import CatalogPage
 from page_objects.MainPage import MainPage

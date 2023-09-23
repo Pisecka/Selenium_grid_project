@@ -1,12 +1,13 @@
+from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 
 from .BasePage import BasePage
 
 
 class MainPage(BasePage):
-    SLIDESHOW = (By.ID, "slideshow0")
-    BUTTON_SEARCH = (By.CSS_SELECTOR, "#search > span > button")
-    BUTTON_CART = (By.CSS_SELECTOR, "#cart > button")
+    SLIDESHOW = (By.ID, "carousel-banner-0")
+    BUTTON_SEARCH = (By.CSS_SELECTOR, "#search > button")
+    BUTTON_CART = (By.CSS_SELECTOR, "#header-cart > div > button")
     SITE_MAP = (By.CSS_SELECTOR, "body > footer > div > div > div:nth-child(2) > ul > li:nth-child(3) > a")
     CURRENCY = (By.CSS_SELECTOR, "#form-currency > div > button")
     BUTTON_DOLLAR = (By.CSS_SELECTOR, "#form-currency > div > ul > li:nth-child(3) > button")
@@ -28,7 +29,7 @@ class MainPage(BasePage):
 
     def click_site_map(self):
         site_map = self._element(self.SITE_MAP)
-        site_map.click()
+        site_map.send_keys(Keys.ENTER)
         return site_map
 
     def click_currency(self):
