@@ -1,0 +1,44 @@
+INFO     MainPage:BasePage.py:43 Try to find an element
+ERROR    MainPage:BasePage.py:46 RECEIVED ERROR: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001045aed98 chromedriver + 4337048
+1   chromedriver                        0x00000001045a6e14 chromedriver + 4304404
+2   chromedriver                        0x00000001041d3a5c chromedriver + 293468
+3   chromedriver                        0x0000000104218d50 chromedriver + 576848
+4   chromedriver                        0x0000000104253908 chromedriver + 817416
+5   chromedriver                        0x000000010420ca5c chromedriver + 526940
+6   chromedriver                        0x000000010420d908 chromedriver + 530696
+7   chromedriver                        0x0000000104574de4 chromedriver + 4099556
+8   chromedriver                        0x00000001045792a0 chromedriver + 4117152
+9   chromedriver                        0x000000010457f52c chromedriver + 4142380
+10  chromedriver                        0x0000000104579da0 chromedriver + 4119968
+11  chromedriver                        0x0000000104551a74 chromedriver + 3955316
+12  chromedriver                        0x0000000104596a48 chromedriver + 4237896
+13  chromedriver                        0x0000000104596bc4 chromedriver + 4238276
+14  chromedriver                        0x00000001045a6a8c chromedriver + 4303500
+15  libsystem_pthread.dylib             0x000000018cafffa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x000000018cafada0 thread_start + 8
+Traceback (most recent call last):
+  File "/Users/karinapisecka/Desktop/task6_PageObject/page_objects/BasePage.py", line 44, in _verify_element_presence
+    return WebDriverWait(self.browser, self.browser.t).until(EC.visibility_of_element_located(locator))
+  File "/Users/karinapisecka/Desktop/task6_PageObject/venv/lib/python3.9/site-packages/selenium/webdriver/support/wait.py", line 89, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001045aed98 chromedriver + 4337048
+1   chromedriver                        0x00000001045a6e14 chromedriver + 4304404
+2   chromedriver                        0x00000001041d3a5c chromedriver + 293468
+3   chromedriver                        0x0000000104218d50 chromedriver + 576848
+4   chromedriver                        0x0000000104253908 chromedriver + 817416
+5   chromedriver                        0x000000010420ca5c chromedriver + 526940
+6   chromedriver                        0x000000010420d908 chromedriver + 530696
+7   chromedriver                        0x0000000104574de4 chromedriver + 4099556
+8   chromedriver                        0x00000001045792a0 chromedriver + 4117152
+9   chromedriver                        0x000000010457f52c chromedriver + 4142380
+10  chromedriver                        0x0000000104579da0 chromedriver + 4119968
+11  chromedriver                        0x0000000104551a74 chromedriver + 3955316
+12  chromedriver                        0x0000000104596a48 chromedriver + 4237896
+13  chromedriver                        0x0000000104596bc4 chromedriver + 4238276
+14  chromedriver                        0x00000001045a6a8c chromedriver + 4303500
+15  libsystem_pthread.dylib             0x000000018cafffa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x000000018cafada0 thread_start + 8

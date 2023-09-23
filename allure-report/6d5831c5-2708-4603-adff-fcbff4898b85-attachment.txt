@@ -1,0 +1,1 @@
+INFO     CatalogPage:BasePage.py:43 Try to find an element

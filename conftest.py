@@ -1,9 +1,10 @@
 import os
 
+import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-
+allure
 
 def driver_factory(browser):
     if browser == "chrome":
@@ -19,7 +20,7 @@ def pytest_addoption(parser):
     parser.addoption("--browser", default="chrome")
     parser.addoption("--b_version", default="117.0")
     parser.addoption("--url", default="https://demo.opencart.com/")
-    parser.addoption("--executor", action="store", default="http://192.168.0.13:4444")
+    parser.addoption("--executor", action="store", default="http://192.168.0.3:4444")
 
 
 @pytest.fixture(scope="session", autouse=True)
@@ -43,10 +44,10 @@ def browser(request):
     executor = request.config.getoption("--executor")
     url = request.config.getoption("--url")
 
-    if executor == "http://192.168.0.13:4444/wd/hub":
+    if executor == "http://192.168.0.3:4444/wd/hub":
         driver = driver_factory(browser)
     else:
-        executor_url = f"http://192.168.0.13:4444/wd/hub"
+        executor_url = f"http://192.168.0.3:4444/wd/hub"
         caps = {
             "browserName": browser,
             "browserVersion": b_version,

@@ -1,0 +1,45 @@
+2023-09-23 15:13:29,246 - AdminPage - INFO - Try to find an element
+2023-09-23 15:13:34,361 - AdminPage - ERROR - RECEIVED ERROR: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000100daed98 chromedriver + 4337048
+1   chromedriver                        0x0000000100da6e14 chromedriver + 4304404
+2   chromedriver                        0x00000001009d3a5c chromedriver + 293468
+3   chromedriver                        0x0000000100a18d50 chromedriver + 576848
+4   chromedriver                        0x0000000100a53908 chromedriver + 817416
+5   chromedriver                        0x0000000100a0ca5c chromedriver + 526940
+6   chromedriver                        0x0000000100a0d908 chromedriver + 530696
+7   chromedriver                        0x0000000100d74de4 chromedriver + 4099556
+8   chromedriver                        0x0000000100d792a0 chromedriver + 4117152
+9   chromedriver                        0x0000000100d7f52c chromedriver + 4142380
+10  chromedriver                        0x0000000100d79da0 chromedriver + 4119968
+11  chromedriver                        0x0000000100d51a74 chromedriver + 3955316
+12  chromedriver                        0x0000000100d96a48 chromedriver + 4237896
+13  chromedriver                        0x0000000100d96bc4 chromedriver + 4238276
+14  chromedriver                        0x0000000100da6a8c chromedriver + 4303500
+15  libsystem_pthread.dylib             0x000000018cafffa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x000000018cafada0 thread_start + 8
+Traceback (most recent call last):
+  File "/Users/karinapisecka/Desktop/task6_PageObject/page_objects/BasePage.py", line 44, in _verify_element_presence
+    return WebDriverWait(self.browser, self.browser.t).until(EC.visibility_of_element_located(locator))
+  File "/Users/karinapisecka/Desktop/task6_PageObject/venv/lib/python3.9/site-packages/selenium/webdriver/support/wait.py", line 89, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000100daed98 chromedriver + 4337048
+1   chromedriver                        0x0000000100da6e14 chromedriver + 4304404
+2   chromedriver                        0x00000001009d3a5c chromedriver + 293468
+3   chromedriver                        0x0000000100a18d50 chromedriver + 576848
+4   chromedriver                        0x0000000100a53908 chromedriver + 817416
+5   chromedriver                        0x0000000100a0ca5c chromedriver + 526940
+6   chromedriver                        0x0000000100a0d908 chromedriver + 530696
+7   chromedriver                        0x0000000100d74de4 chromedriver + 4099556
+8   chromedriver                        0x0000000100d792a0 chromedriver + 4117152
+9   chromedriver                        0x0000000100d7f52c chromedriver + 4142380
+10  chromedriver                        0x0000000100d79da0 chromedriver + 4119968
+11  chromedriver                        0x0000000100d51a74 chromedriver + 3955316
+12  chromedriver                        0x0000000100d96a48 chromedriver + 4237896
+13  chromedriver                        0x0000000100d96bc4 chromedriver + 4238276
+14  chromedriver                        0x0000000100da6a8c chromedriver + 4303500
+15  libsystem_pthread.dylib             0x000000018cafffa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x000000018cafada0 thread_start + 8
+
